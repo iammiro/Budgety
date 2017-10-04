@@ -1,20 +1,14 @@
+//Budget controller
 var budgetController = (function () {
-    var x = 24;
 
-    var add = function (a) {
-        return x + a;
-    };
-    return {
-        publickTest: function (b) {
-            console.log(add(b));
-        }
-    }
 })();
 
+//UI Controller
 var UIController = (function () {
 
 })();
 
+//Global APP Controller
 var controller = (function (budgetCtrl, UICtrl) {
 
 })(budgetController, UIController); 
