@@ -155,6 +155,13 @@ var UIController = (function () {
 
         },
 
+        deleteListItem: function (selectorId) {
+            var el = document.getElementById(selectorId);
+            el.parentNode.removeChild(el);
+
+
+        },
+
         clearFields: function () {
             var fields, fieldsArray;
 
@@ -257,9 +264,12 @@ var controller = (function (budgetCtrl, UICtrl) {
 
             //    1. Delete item from the data structure
             budgetCtrl.deleteItem(type, ID);
+
             //    2. Delete item from UI
+            UICtrl.deleteListItem(itemID);
 
             //    3. Update and show the ntw budget
+            updateBudget();
 
         }
     };
